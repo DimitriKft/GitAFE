@@ -9,6 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        VStack {
+            ExtractedView()
+            ExtractedView()
+            ExtractedView()
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+struct ExtractedView: View {
+    var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
                 .foregroundColor(.red)
@@ -21,11 +37,5 @@ struct ContentView: View {
             .foregroundColor(.black
             )
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
